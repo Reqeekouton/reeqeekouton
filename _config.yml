@@ -2,3 +2,5 @@ theme: jekyll-theme-modernist
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
+title: Rymingenu的小窝
+description: 又称 Rym , Reeqeekouton , Reqeekouton , Yale Max Rymingenu 等的小窝 
