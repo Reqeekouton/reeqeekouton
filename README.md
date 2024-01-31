@@ -9,5 +9,5 @@
 ---
 
 ### 这是我经常活跃的网站
-> (SCP基金会（中文分部）)[https://scp-wiki-cn.wikidot.com/]
-> (Write on paper)[https://write-on-paper.wikidot.com/]
+> [SCP基金会（中文分部）](https://scp-wiki-cn.wikidot.com/)
+> [Write on paper](https://write-on-paper.wikidot.com/)
