@@ -1,0 +1,63 @@
+<! DOCTYPE HTLM>
+<html>
+<head>
+<meta charset="utf-8">
+<title>欢迎来到我的实验室！</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC|Noto+Serif+SC&display=swap');
+  body{
+    font-family:'Noto+Sans+SC','Noto+Serif+SC';
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-family:'Noto+Sans+SC','Noto+Serif+SC';
+  }
+  .countdown{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+    font-family:'Noto+Sans+SC','Noto+Serif+SC';
+    font-style:italic;
+    text-align:center;
+    border-style:dashed;
+    border-color:#191919;
+    border-width:2px;
+    width:700px;
+    height:150px;
+    background-color:#e5e5e5;
+  }   
+</style>
+</head>
+<body>
+  <h1>欢迎来到Rymingenu的实验室！</h1>
+  <h2>所以你来这里是干什么的？</h2>
+  <div class=countdown></div>
+     <script>
+      function updateCountdown() {
+        // 获取当前日期和时间
+        var today = new Date();
+
+        // 计算距离下一个春节的时间差
+        var springFestival = new Date(today.getFullYear(), 0, 1);
+        if (today.getMonth() > 0 || (today.getMonth() === 0 && today.getDate() > 1)) {
+          springFestival.setFullYear(springFestival.getFullYear() + 1);
+        }
+        var timeDiff = springFestival.getTime() - today.getTime();
+        
+        // 转换为天、小时、分钟和秒
+        var days = Math.floor(timeDiff / (1000 * 3600 * 24));
+        var hours = Math.floor((timeDiff % (1000 * 3600 * 24)) / (1000 * 3600));
+        var minutes = Math.floor((timeDiff % (1000 * 3600)) / (1000 * 60));
+        var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+        
+        // 显示倒计时
+        var countdownElement = document.getElementById("countdown");
+        countdownElement.textContent = "距离春节还有 " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
+      }
+      
+      // 每秒更新倒计时
+      setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
